@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // получаем все поля по id из activity_main.xml
         resultField = findViewById(R.id.resultField);
         numberField = findViewById(R.id.numberField);
         operationField = findViewById(R.id.operationField);
@@ -48,16 +47,17 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.n9).setOnClickListener((view)->onNumberClick("9"));
         findViewById(R.id.comma).setOnClickListener((view)->onNumberClick(","));
     }
-    // сохранение состояния
+
     @Override
+    //Сохранение 
     protected void onSaveInstanceState(Bundle outState) {
         outState.putString("OPERATION", lastOperation);
         if(operand!=null)
             outState.putDouble("OPERAND", operand);
         super.onSaveInstanceState(outState);
     }
-    // получение ранее сохраненного состояния
     @Override
+    // Загрузка
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         lastOperation = savedInstanceState.getString("OPERATION");
@@ -65,18 +65,17 @@ public class MainActivity extends AppCompatActivity {
         resultField.setText(operand.toString());
         operationField.setText(lastOperation);
     }
-    // обработка нажатия на числовую кнопку
+    // обработка нажатия на число
     public void onNumberClick(String number){
         numberField.append(number);
         if(lastOperation.equals("=") && operand!=null){
             operand = null;
         }
     }
-    // обработка нажатия на кнопку операции
+    // обработка нажатия на операцию
     public void onOperationClick(String op){
 
         String number = numberField.getText().toString();
-        // если введенно что-нибудь
         if(number.length()>0){
             number = number.replace(',', '.');
             try{
@@ -91,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void performOperation(Double number, String operation){
 
-        // если операнд ранее не был установлен (при вводе самой первой операции)
         if(operand ==null){
             operand = number;
         }
