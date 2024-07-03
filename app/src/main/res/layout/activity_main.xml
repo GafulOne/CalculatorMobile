@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:background="@color/black">
+    <!-- поле результата -->
+    <!-- поле знака операции -->
+    <!-- поле ввода чисел -->
+
+    <TextView
+        android:id="@+id/resultField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/operationField"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/operationField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/resultField"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/numberField"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/app_name"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="75dp" />
+
+    <LinearLayout
+        android:id="@+id/firstButtonPanel"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberField">
+
+        <Button
+            android:id="@+id/n7"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:foreground=""
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:text="@string/_7" />
+
+        <Button
+            android:id="@+id/n8"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:text="@string/_8" />
+
+        <Button
+            android:id="@+id/n9"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:text="@string/_9" />
+
+        <Button
+            android:id="@+id/div"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:text="@string/slash" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondButtonPanel"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstButtonPanel">
+
+        <Button
+            android:id="@+id/n4"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:text="@string/_4" />
+
+        <Button
+            android:id="@+id/n5"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:text="@string/_5" />
+
+        <Button
+            android:id="@+id/n6"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:text="@string/_6" />
+
+        <Button
+            android:id="@+id/mul"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:text="@string/multi" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/thirdButtonPanel"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondButtonPanel">
+
+        <Button
+            android:id="@+id/n1"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:text="@string/_1" />
+
+        <Button
+            android:id="@+id/n2"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:tag="num"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:text="@string/_2" />
+
+        <Button
+            android:id="@+id/n3"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:text="@string/_3" />
+
+        <Button
+            android:id="@+id/sub"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:text="@string/minus" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/forthButtonPanel"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thirdButtonPanel">
+
+        <Button
+            android:id="@+id/n0"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:text="@string/_0" />
+
+        <Button
+            android:id="@+id/comma"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:text="@string/comma" />
+
+        <Button
+            android:id="@+id/add"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:text="@string/plus" />
+
+        <Button
+            android:id="@+id/eq"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:text="@string/equal" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/clearButton"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="@color/yellow"
+        android:text="C"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.604"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
